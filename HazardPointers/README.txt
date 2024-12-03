@@ -1,0 +1,3 @@
+For this project, I created a multithreaded self-sorting vector container in C++. To make it lock-free, I utilized the “hazard pointers” concept in my work. This involves storing the data of discarded elements within a retired pointers list, ensuring that other threads currently accessing the element can continue to do so safely.
+
+The header file of this sample contains the full implementation of the LFSV (lock-free sorted vector) class, which also includes the implementation of the structures I used to facilitate the hazard pointers concept. One of these structures is a central memory bank to handle element data instantiation for the vector.
